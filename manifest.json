@@ -3,7 +3,7 @@
   "short_name": "Dra. Anita",
   "description": "Médica especialista em emagrecimento, menopausa e hormônios em Maceió.",
   "start_url": "/",
-  "display": "standalone",
+  "display": "browser",
   "background_color": "#FDFCFA",
   "theme_color": "#8B7355",
   "lang": "pt-BR",
