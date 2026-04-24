@@ -1,0 +1,14 @@
+{
+  "name": "Dra. Anita Costa — Plano Vida Leve",
+  "short_name": "Dra. Anita",
+  "description": "Médica especialista em emagrecimento, menopausa e hormônios em Maceió.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDFCFA",
+  "theme_color": "#8B7355",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
