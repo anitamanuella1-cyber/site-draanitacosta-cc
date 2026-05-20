@@ -62,3 +62,10 @@ const sectionObserver = new IntersectionObserver(entries => {
 
 sections.forEach(s => sectionObserver.observe(s));
 
+// Meta Pixel — Lead event on WhatsApp clicks
+document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+  link.addEventListener('click', () => {
+    if (typeof fbq === 'function') fbq('track', 'Lead');
+  });
+});
+
