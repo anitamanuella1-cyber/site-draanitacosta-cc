@@ -793,6 +793,67 @@ ul, ol { list-style: none; }
 }
 
 /* =============================================
+   CONSULTA ONLINE
+   ============================================= */
+.online {
+  padding: 56px 0;
+  background: linear-gradient(135deg, rgba(139,115,85,.07) 0%, rgba(139,115,85,.03) 100%);
+  border-top: 1px solid var(--color-muted);
+  border-bottom: 1px solid var(--color-muted);
+}
+
+.online__inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.online__icon {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+}
+
+.online__text {
+  flex: 1;
+}
+
+.online__eyebrow {
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.online__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.online__subtitle {
+  font-size: .9rem;
+  color: var(--color-text-light);
+  line-height: 1.65;
+}
+
+.online__cta {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* =============================================
    FOOTER
    ============================================= */
 .footer {
@@ -984,7 +1045,7 @@ ul, ol { list-style: none; }
    RESPONSIVE — MOBILE (< 640px)
    ============================================= */
 @media (max-width: 640px) {
-  :root { --section-py: 56px; }
+  :root { --section-py: 48px; }
 
   .header__nav { display: none; }
   .header__cta { display: none; }
@@ -1010,23 +1071,32 @@ ul, ol { list-style: none; }
     font-size: .95rem;
   }
 
-  .hero { padding: 88px 0 56px; }
+  .hero { padding: 80px 0 48px; }
   .hero__title { font-size: 2.4rem; }
+
+  /* padding interno dos cards de dores */
+  .dores__item { padding: 24px 0; }
+  .dores__item + .dores__item { padding-left: 0; border-left: none; }
 
   .programa__step { flex-direction: column; gap: 12px; }
   .programa__step-number { font-size: 2rem; }
 
-  .depoimentos__grid {
-    grid-template-columns: 1fr;
+  /* padding interno dos depoimentos */
+  .depoimentos__grid { grid-template-columns: 1fr; }
+  .depoimentos__item { padding: 24px 0; }
+  .depoimentos__item + .depoimentos__item { padding-left: 0; border-left: none; }
+
+  /* consulta online: empilha no mobile */
+  .online__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
   }
 
-  .depoimentos__item + .depoimentos__item {
-    padding-left: 0;
-    border-left: none;
-  }
+  .online__cta { width: 100%; justify-content: center; }
 
-  .depoimentos__item { padding-right: 0; padding-bottom: 32px; }
-
+  /* CTA final: alinha com as demais seções */
+  .cta-final { padding: 48px 0; }
   .cta-final__title { font-size: 2rem; }
 
   .footer__inner { gap: 28px; }
