@@ -682,7 +682,7 @@ ul, ol { list-style: none; }
    ============================================= */
 .cta-final {
   padding: 120px 0;
-  background: #F5F2EE;
+  background: var(--color-bg-alt);
 }
 
 .cta-final::before {
