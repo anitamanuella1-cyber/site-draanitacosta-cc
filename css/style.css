@@ -797,7 +797,7 @@ ul, ol { list-style: none; }
    ============================================= */
 .online {
   padding: 56px 0;
-  background: linear-gradient(135deg, rgba(139,115,85,.07) 0%, rgba(139,115,85,.03) 100%);
+  background: #F5F2EE;
   border-top: 1px solid var(--color-muted);
   border-bottom: 1px solid var(--color-muted);
 }
