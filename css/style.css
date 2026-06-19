@@ -40,7 +40,12 @@
    ============================================= */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  overscroll-behavior: none;
+  touch-action: pan-y;
+}
 
 body {
   font-family: var(--font-body);
@@ -52,6 +57,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overscroll-behavior: none;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -1281,7 +1287,6 @@ ul, ol { list-style: none; }
    TOUCH OPTIMIZATION
    ============================================= */
 html {
-  touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -1297,4 +1302,16 @@ a, button {
 
 .whatsapp-float {
   touch-action: manipulation;
+}
+
+/* AOS: animações horizontais viram verticais em mobile para evitar scroll fantasma */
+@media (max-width: 900px) {
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: translateY(30px) !important;
+  }
+  [data-aos="fade-left"].aos-animate,
+  [data-aos="fade-right"].aos-animate {
+    transform: translateY(0) !important;
+  }
 }
